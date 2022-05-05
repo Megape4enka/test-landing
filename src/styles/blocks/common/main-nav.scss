@@ -1,0 +1,258 @@
+@import "../../global/mixins";
+
+.main-nav {
+  margin: 0 -20px;
+
+  border-top: 1px solid #e6e6e6;
+
+  @include md {
+    border-top: 0;
+    margin: 0;
+  }
+
+  @include lg {
+    border-top: 0;
+    margin: 0;
+  }
+}
+
+.main-switcher {
+
+  @include md {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .language-switch-desktop {
+      margin-left: 40px;
+    }
+  }
+
+  @include lg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .language-switch-desktop {
+      margin-left: 40px;
+    }
+  }
+}
+
+.main-nav__list {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+
+  width: 80%;
+  height: 100%;
+
+  margin: 0;
+  padding: 80px 0;
+
+  list-style: none;
+
+  background-color: #ffffff;
+
+  transition-duration: .25s;
+  z-index: 5;
+
+  @include reset-list ();
+
+  .main-nav--no-js &,
+  .main-nav--opened & {
+    visibility: visible;
+    right: 0;
+  }
+
+  @include md {
+    display: flex;
+    position: relative;
+    visibility: visible;
+    right: 0;
+    width: 100%;
+  }
+
+  @include lg {
+    display: flex;
+    position: relative;
+    visibility: visible;
+    right: 0;
+    width: 100%;
+  }
+}
+
+.main-nav__list li:nth-child(1) {
+  border-top: 1px solid #e6e6e6;
+  margin-top: 65px;
+
+  @include md {
+    margin-top: 0;
+    border-top: none;
+  }
+
+  @include lg {
+    margin-top: 0;
+    border-top: none;
+  }
+}
+
+.main-nav__list li:nth-child(5) {
+  position: absolute;
+  width: 100%;
+  border-top: 1px solid #e6e6e6;
+  padding-top: 18px;
+  bottom: 18px;
+
+  @include md {
+    display: none;
+  }
+
+  @include lg {
+    display: none;
+  }
+}
+
+.language-switch-desktop {
+  width: 60px;
+  height: 31px;
+  font-weight: 400;
+  font-size: 12px;
+  display: none;
+
+  @include md {
+    display: flex;
+    align-items: center;
+    border: 1px solid #FB915F;
+    border-radius: 25px;
+    padding: 0 3px;
+
+    .active {
+      background-color: #FB915F;
+      color: #ffffff;
+      border-radius: 50%;
+      padding: 5px;
+    }
+
+    .en {
+      margin-left: 8px;
+    }
+
+    .ru {
+      padding-left: 5px;
+    }
+
+    a {
+      color: #858585;
+    }
+  }
+
+  @include lg {
+    display: flex;
+    align-items: center;
+    border: 1px solid #FB915F;
+    border-radius: 25px;
+    padding: 2px 4px;
+
+    .active {
+      background-color: #FB915F;
+      border-radius: 50%;
+      padding: 5px;
+    }
+
+    .en {
+      margin-left: 8px;
+    }
+
+    .ru {
+      padding-left: 5px;
+    }
+  }
+
+  a {
+    color: #858585;
+  }
+}
+
+.language-switch {
+  padding-left: 20px;
+
+  a {
+    color: #BDC3CB;
+  }
+
+  .active {
+    color: #343639;
+  }
+
+  .ru {
+    padding-right: 10px;
+  }
+}
+
+.main-nav__link {
+  display: block;
+  text-align: left;
+  padding: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+
+  &:hover {
+    color: #FB915F;
+  }
+
+  &:active {
+    color: #FB915F;
+  }
+
+  &--active {
+    color: #FB915F;
+    pointer-events: none;
+  }
+
+  @include md {
+    margin: 0 18px;
+    padding: 10px 0;
+    font-size: 18px;
+    line-height: 1.38;
+
+    &--active {
+      border-bottom: 2px solid #FB915F;
+    }
+  }
+}
+
+.burger-menu_overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+
+  @include md {
+    overflow: hidden;
+  }
+
+  @include lg {
+    overflow: hidden;
+  }
+}
+
+.burger-menu_overlay.main-nav--opened {
+  display: block;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  @include md {
+    overflow: hidden;
+  }
+
+  @include lg {
+    overflow: hidden;
+  }
+}

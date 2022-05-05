@@ -1,0 +1,41 @@
+@import "../../global/mixins";
+
+.main {
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+@include md {
+
+}
+
+@include lg {
+  //.main::before {
+  //  position: absolute;
+  //  content: "";
+  //  top: 0;
+  //  bottom: 37%;
+  //  right: 0;
+  //  left: 0;
+  //  background-image: url('../images/Polygon1.svg');
+  //  background-repeat: no-repeat;
+  //  background-size: 80% auto;
+  //  background-position: left center;
+  //  z-index: -1;
+  //}
+
+  //.main::after {
+  //  position: absolute;
+  //  content: "";
+  //  top: 79%;
+  //  bottom: 0;
+  //  right: 0;
+  //  left: 0;
+  //  background-image: url('../images/Polygon2.svg');
+  //  background-repeat: no-repeat;
+  //  background-size: 55% auto;
+  //  background-position: right center;
+  //  z-main: -1;
+  //}
+}

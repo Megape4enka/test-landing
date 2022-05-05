@@ -1,0 +1,26 @@
+/* Grid setup */
+$mobile-width: 320px;
+$bgmobile-width: 480px;
+$mdmobile-width: 420px;
+$msmobile-width: 380px;
+$tablet-width: 768px;
+$laptop-width: 1024px;
+$desktop-width: 1300px;
+
+
+/* Colour palette */
+//$black: #111111;
+//$darkgrey: #444444;
+//$grey: #f2f2f2;
+//$border-grey: #cdcdcd;
+//$green: #68b738;
+//$red: #ff8282;
+
+// Pixel density
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// Gutters
+$mobile-pads: 20px;
+$tablet-pads: 30px;
+$desktop-pads: 40px;

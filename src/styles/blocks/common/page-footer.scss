@@ -1,0 +1,177 @@
+@import "../../global/mixins";
+
+footer {
+  margin-top: -1px;
+  background: radial-gradient(414.91% 6947.3% at -59.66% -119.62%, #F39A51 0%, #F294AA 100%);
+}
+
+.footer-block {
+  padding-top: 45px;
+
+  .social--list {
+    display: flex;
+    padding: 0;
+    padding-bottom: 24px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  &_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+  }
+
+  &__logo {
+    width: 91px;
+    margin-right: 25px;
+  }
+
+  .more-info {
+    p {
+      font-size: 14px;
+      color: #ffffff;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+
+    p:nth-child(3) {
+      margin-bottom: 0;
+    }
+  }
+
+  &-confid {
+
+    .container {
+      margin: 0;
+      padding: 0;
+      min-width: 320px;
+      box-sizing: border-box;
+
+      @include md {
+        display: flex;
+        margin: 0 auto;
+        padding: 0 $tablet-pads;
+
+        .footer-text {
+          border: none;
+          padding: 20px 20px 39px 0;
+        }
+      }
+
+      @include lg {
+        display: flex;
+        margin: 0 auto;
+        padding: 0 $desktop-pads;
+        max-width: $desktop-width;
+
+        .footer-text {
+          border: none;
+          padding: 20px 20px 39px 0;
+        }
+      }
+    }
+
+    .footer-text {
+      border-top: 1px solid #ffffff;
+      padding: 20px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #eff1f4;
+    }
+
+    .footer-politic {
+      display: none;
+    }
+  }
+
+  @include md {
+    &_info {
+      box-sizing: border-box;
+      margin-bottom: 0;
+      padding-bottom: 70px;
+      border-bottom: 1px solid #ffffff;
+    }
+
+    .footer-politic {
+      display: inline-block;
+      padding-top: 20px;
+      padding-bottom: 39px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #eff1f4;
+    }
+
+    .social--list {
+      margin-bottom: 16px;
+      justify-content: center;
+    }
+  }
+
+  @include lg {
+    &_info {
+      box-sizing: border-box;
+      margin-bottom: 0;
+      padding-bottom: 70px;
+      border-bottom: 1px solid #ffffff;
+    }
+
+    .footer-politic {
+      display: inline-block;
+      padding-top: 20px;
+      padding-bottom: 39px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #eff1f4;
+    }
+
+    .social--list {
+      margin-bottom: 16px;
+      justify-content: center;
+    }
+  }
+}
+
+@include md {
+
+}
+
+@include lg {
+  .footer-block {
+    padding-top: 50px;
+  }
+}
+
+.social--list-item a {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #FCA98E;
+  border-radius: 50%;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  transition: color 0.2s linear;
+}
+
+.social--list-item a svg {
+  position: absolute;
+  top: 11px;
+  left: 11px;
+}
+
+.social--list-item:nth-child(4) a svg {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+}
+
+.social--list-item a:hover {
+  opacity: 0.9;
+}

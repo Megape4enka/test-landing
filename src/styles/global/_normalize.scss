@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import "variables";
+@import "../global/mixins";
+
+html,
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1;
+  box-sizing: border-box;
+
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  background-color: #ffffff;
+
+  user-select: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #111111;
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+li {
+  @include reset-list();
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 14px;
+  min-width: 320px;
+  box-sizing: border-box;
+
+  @include md {
+    padding: 0 $tablet-pads;
+  }
+
+  @include lg {
+    padding: 0 $desktop-pads;
+    max-width: $desktop-width;
+  }
+}
+
+.visually-hidden,
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #7B7D80;
+  line-height: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-weight: 400;
+}
+
+textarea,
+input,
+button {
+  font-size: 100%;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
