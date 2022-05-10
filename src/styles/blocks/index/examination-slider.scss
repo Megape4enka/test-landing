@@ -1,0 +1,136 @@
+@import "../../global/mixins";
+
+.examination {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &-info {
+    margin-bottom: 70px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+    letter-spacing: -0.5px;
+    color: #151515;
+    margin-top: 127px;
+    margin-bottom: 28px;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.5px;
+    color: #333333;
+    opacity: 0.7;
+    margin-bottom: 49px;
+  }
+
+  &__list {
+    display: flex!important;
+    flex-direction: row!important;
+    margin-bottom: 30px!important;
+  }
+
+  &__first {
+    position: relative!important;
+    width: 220px!important;
+    height: 357px!important;
+  }
+
+  &__item {
+    position: relative!important;
+    width: 340px!important;
+    height: 357px!important;
+    background: #F5F5F5!important;
+    border-radius: 2px!important;
+    margin-right: 20px!important;
+
+    p {
+      position: absolute!important;
+      top: 80% !important;
+      font-weight: 700!important;
+      font-size: 16px!important;
+      line-height: 22px!important;
+      text-align: center!important;
+      letter-spacing: -0.5px!important;
+      color: #151515!important;
+      opacity: 0.7!important;
+      padding-left: 40px!important;
+      padding-right: 40px!important;
+    }
+  }
+
+  .swiper {
+    width: 100%!important;
+    margin-left: 0!important;
+    margin-right: 0!important;
+    overflow: visible;
+  }
+
+  .work-slider__wrapper {
+    display: flex;
+  }
+
+  .swiper-wrapper {
+    margin-bottom: 38px;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 220px;
+    height: 100%;
+    object-fit: cover;
+
+
+    @include lg {
+      //background-color: transparent;
+      position: absolute!important;
+      top: -15%!important;
+      left: 50%!important;
+      transform: translateX(-50%)!important;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 20px!important;
+    height: 2px!important;
+    background-color: #CCCCCC !important;
+    border-radius: 10px!important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #FEE040!important;
+    width: 40px!important;
+  }
+
+  .sc {
+    margin-bottom: 80px;
+  }
+}
+
+
